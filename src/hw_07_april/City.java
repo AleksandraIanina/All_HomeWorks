@@ -1,11 +1,11 @@
 package hw_07_april;
 
-import hw_02_april.Dog;
-
 public class City {
 
     private String name;
     private int citizenNumber;
+    private String key = "spb";
+
 
     public static void startExecution(){                         //ВЫЗОВ МЕТОДОВ
 
@@ -43,7 +43,26 @@ public class City {
         System.out.println(city6.name + " " + city6.citizenNumber);
         System.out.println(city7.name + " " + city7.citizenNumber);
 
+        //hw 09 april 2020
+
+        City [] Array;
+        Array = new City[10];
+
+        Array[0] = city1;
+        Array[1] = city2;
+        Array[2] = city3;
+        Array[3] = city4;
+        Array[4] = city5;
+        Array[5] = city6;
+        Array[6] = city7;
 
 
+        Array[0].key = "msk";
+        Array[1].key = "vrn";
+        Array[2].key = "spb";
+
+        for (int i = 0; i < Array.length; i++){
+            System.out.println(Array[i].key);
+        }
     }
 }
